@@ -1,6 +1,10 @@
 FROM ymonnier/sdkman-java
 
-RUN sdk install kscript
+SHELL [ "/bin/bash", "-c" ]
+
+RUN source /root/.sdkman/bin/sdkman-init.sh && sdk install java
+RUN source /root/.sdkman/bin/sdkman-init.sh && sdk install kotlin
+RUN source /root/.sdkman/bin/sdkman-init.sh && sdk install kscript
 
 ENTRYPOINT [ "kscript" ]
 CMD        [ "--help" ]
