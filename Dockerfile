@@ -1,4 +1,4 @@
-FROM ymonnier/docker-sdkman-java
+FROM ymonnier/sdkman-java
 
 RUN sdk install kscript
 
